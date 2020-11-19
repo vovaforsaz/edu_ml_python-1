@@ -1,15 +1,17 @@
 if __name__ == '__main__':
-    print("lesson 3")
+    print("lesson 2")
     """
     Arithmetic Operators, Assignment Operators, Comparison Operators, 
     """
 
     # Addition
-    print("Addition 5 + 2 = ", 5 + 2)
+    a = 5
+    b = 2
+    print("Addition a + b = ", a + b)
     # Subtraction
     print("Subtraction 5 - 2 = ", 5 - 2)
     # Multiplication
-    print("Multiplication 5 / 2 = ", 5 * 2)
+    print("Multiplication 5 * 2 = ", 5 * 2)
     # Division
     print("Division 5 / 2 = ", 5 / 2)
 
@@ -18,7 +20,7 @@ if __name__ == '__main__':
     # Floor Division
     print("Floor Division 5 // 2 = ", 5 // 2)
     # Modulus
-    print("Modulus 5 % 2 = ", 4 % 2)
+    print("Modulus 5 % 2 = ", 5 % 2)
 
     # Assignment Operators +=, -=, /=, *=, **=, //=, %=
     balance = 100
@@ -30,8 +32,8 @@ if __name__ == '__main__':
 
     # Comparison Operators
     print("Comparison Operators")
-    a = 3
-    b = 5
+    a = 1
+    b = 50
 
     print("a == b ", a == b)  # Equal
     print("a != b ", a != b)  # Not equal
@@ -46,7 +48,7 @@ if __name__ == '__main__':
     print("Logical Operators 'or', 'and', 'not' ")
     print(True and True and True and True)
     print(True and True and True and False)
-    print(False or False or False or False)
+    print(False or False or True or False)
     print(False or False or False or True)
     print(not False or True)
 
