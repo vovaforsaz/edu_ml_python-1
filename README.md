@@ -2,8 +2,6 @@
 
 ##### Code visualization 
 http://www.pythontutor.com/visualize.html#mode=display 
-http://pythontutor.com/visualize.html#mode=edit
-
 
 ##### Education manuals
 https://docs.python-guide.org/intro/learning/

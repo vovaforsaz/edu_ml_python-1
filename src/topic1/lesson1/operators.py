@@ -42,17 +42,25 @@ if __name__ == '__main__':
     print("'Hello' == 'World' - ", 'Hello' == 'World')
     print("'Python' != 'R' - ", "Python" != "R")
 
-    # Logical Operators 'or', 'and'
-    print("Logical Operators 'or', 'and'")
+    # Logical Operators 'or', 'and', 'not'
+    print("Logical Operators 'or', 'and', 'not' ")
     print(True and True and True and True)
     print(True and True and True and False)
     print(False or False or False or False)
     print(False or False or False or True)
+    print(not False or True)
 
 
-def task1():
+def operators_task1():
+    a = 0
+    return a
 
-    a = 1
-    b = 2
-    c = 3
-    print(a ** b > 5 and c - a // b >= 9 or b ** 2 == c)
+
+def operators_task2():
+    return True and True and False
+
+
+def operators_task3():
+    a = 10
+    b = 5
+    return a < b
