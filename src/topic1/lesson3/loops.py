@@ -1,7 +1,7 @@
 if __name__ == '__main__':
     """
     There are two types of loops in Python, for and while.
-    
+
     @see https: // docs.python.org / 3.8 / tutorial / controlflow.html
     4.2. for Statements
     4.3. The range() Function
@@ -51,8 +51,11 @@ def loops_task1():
     """
     Use loop for creation list with 500 integer elements
     """
-    # TODO write the code
-    result = None
+    result = []
+    count = 0
+    while (count < 500):
+        result.append(count)
+        count += 1
     return result
 
 
@@ -61,6 +64,6 @@ def loops_task2():
     """
     Use loop for creation new list with even elements [2,4,6,8,10]
     """
-    # TODO write the code
-    result = None
-    return result
+    for result in task2:
+        if result % 2 == 0:
+            return result
