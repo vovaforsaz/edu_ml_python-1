@@ -48,9 +48,7 @@ if __name__ == '__main__':
 
 
 def loops_task1():
-    """
-    Use loop for creation list with 500 integer elements
-    """
+
     result = []
     count = 0
     while (count < 500):
@@ -61,9 +59,7 @@ def loops_task1():
 
 def loops_task2():
     task2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    """
-    Use loop for creation new list with even elements [2,4,6,8,10]
-    """
+
     for result in task2:
         if result % 2 == 0:
             return result
