@@ -44,4 +44,4 @@ if __name__ == '__main__':
                 b.append(M3[i][j])
     print(b)
     print('')
-    print('Completing the task №3   ')
+    print('Completing the task №3 test')
