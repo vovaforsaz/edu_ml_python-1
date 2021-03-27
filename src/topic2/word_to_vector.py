@@ -9,9 +9,12 @@ similarity and simple linear algebra
 
 @see https://www.baeldung.com/cs/convert-word-to-vector
 
+TFFDF
+PMI
+Word Embeddings (CBO)
 """
 
-# Do not changne the centances
+# Do not change the sentences
 sentence1 = "Socrates likes to watch movies. Mary likes movies too."
 sentence2 = "Rene Descartes likes to watch movies. Mary likes movies too."
 sentence3 = "Kant also likes to watch football games"
@@ -21,14 +24,14 @@ def collect_all_unique_words(list_of_sentences):
     """
     1. all unique words have to be collected to the list
     """
-    # TODO 1
+    # TODO 1 use HOF 'map, filter, etc'
     return None
 
 
 def to_lowercase_and_remove_stop_words(list_of_sentences):
     """
     1. Uppercase should be transform to lower case. For example 'Hello' -> 'hello'
-    2. Remove all STOP WORDS like - 'too, and, etc'
+    2. Remove all STOP WORDS like - 'to, and, etc' Create you own list
 
     """
     # TODO 2
@@ -36,8 +39,16 @@ def to_lowercase_and_remove_stop_words(list_of_sentences):
 
 
 def create_matrix(list_of_sentences, count_of_columns):
-    # TODO 3 collect all unique words from the all sentences
+    """
+    type of the matrix will be 'int'
+    Title of the matrix == our unique words
 
+    TITLE---------------------'movies'--'watch'--'football'--'...'
+    3 line of the matrix 'int''   1  '--'  1  '--'   0   '--'...'
+                              '   1  '--'  1  '--'   0   '--'...'
+                              '   0  '--'  1  '--'   1   '--'...'
+    """
+    # TODO 3 collect all unique words from the all sentences
     return None
 
 
