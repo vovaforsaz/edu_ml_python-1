@@ -53,7 +53,7 @@ if __name__ == '__main__':
     res = map(lambda x: x ** 3, lisy_nimbrt)
     print(list(res))
 
-
+    print('-zip--')
     res = list(zip(lisy_nimbrtssss,lisy_nimbrt))
     print(res)
     print(lambda_multiply_2(5))
