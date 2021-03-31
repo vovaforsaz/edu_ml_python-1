@@ -9,7 +9,7 @@ def my_function():
     print("Hello From My Function!")
 
 
-def my_function_with_5args(username, greeting):
+def my_function_with_args(username, greeting):
     print("Hello, %s , From My Function!, I wish you %s" % (username, greeting))
 
 
@@ -33,7 +33,18 @@ if __name__ == '__main__':
     my_function()
     my_function_with_args("Student", "good luck")
     # print(sum_two_numbers(1,2))
+    M2 = ['sa','scd','scdc','sdcs']
+    res = map(str.upper, M2)
+    print(list(res))
+    ast = lambda x: x * 3
+    lisy_nimbrt = [1,2,3,4,5]
+    lisy_nimbrtssss = ['sa','scd','scdc','sdcs']
+    res = map(lambda x: x ** 3, lisy_nimbrt)
+    print(list(res))
 
+
+    res = list(zip(lisy_nimbrtssss,lisy_nimbrt))
+    print(res)
 def function_task1():
     """
     Modify this function to return a list of strings
