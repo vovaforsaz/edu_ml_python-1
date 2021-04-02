@@ -13,7 +13,7 @@ TFFDF
 PMI
 Word Embeddings (CBO)
 """
-
+from nltk.corpus import stopwords
 # Do not change the sentences
 sentence1 = "Socrates likes to watch movies. Mary likes movies too."
 sentence2 = "Rene Descartes likes to watch movies. Mary likes movies too."
@@ -21,35 +21,48 @@ sentence3 = "Kant also likes to watch football games"
 
 
 def collect_all_unique_words(list_of_sentences):
-    """
-    1. all unique words have to be collected to the list
-    """
-    # TODO 1 use HOF 'map, filter, etc'
-    return None
+    res_list = []
+    for i in list_of_sentences:
+        a = i.split(" ")
+        for j in a:
+            if j not in res_list:
+                res_list.append(j.replace('.',''))
+    ad = []
+    for v in res_list:
+        if v not in ad:
+            ad.append(v)
+    return ad
 
 
 def to_lowercase_and_remove_stop_words(list_of_sentences):
-    """
-    1. Uppercase should be transform to lower case. For example 'Hello' -> 'hello'
-    2. Remove all STOP WORDS like - 'to, and, etc' Create you own list
+    res = list(map(lambda x: x.lower().replace('.',''), list_of_sentences))
+    stop_words = stopwords.words('english')
+    stop_iste = ['.', 'also', 'too']
+    respons = list(filter(lambda x: x not in stop_words, res))
+    resp = list(filter(lambda x: x not in stop_iste, respons))
+    return resp
 
-    """
-    # TODO 2
+
+def create_matrix(dan, all_sentence):
+    print("\n")
+    for u_word in dan:
+        print(u_word, end="\t")
+    print("\n")
+    for sentence in range(len(all_sentence)):
+        tmp_list = all_sentence[sentence].lower()
+        for u_word in dan:
+            if tmp_list.find(u_word) == -1:
+                print(0, end="\t\t")
+            else:
+                print(1, end="\t\t")
+        print("\n")
     return None
 
-
-def create_matrix(list_of_sentences, count_of_columns):
-    """
-    type of the matrix will be 'int'
-    Title of the matrix == our unique words
-
-    TITLE---------------------'movies'--'watch'--'football'--'...'
-    3 line of the matrix 'int''   1  '--'  1  '--'   0   '--'...'
-                              '   1  '--'  1  '--'   0   '--'...'
-                              '   0  '--'  1  '--'   1   '--'...'
-    """
-    # TODO 3 collect all unique words from the all sentences
-    return None
+def fun_work(Mas):
+    list_un = collect_all_unique_words(Mas)
+    lover = to_lowercase_and_remove_stop_words(list_un)
+    create_matrix(lover,Mas)
+    return  None
 
 
 if __name__ == '__main__':
@@ -57,6 +70,12 @@ if __name__ == '__main__':
     we need to deal with linguistic entities such as words?
     How can we model them as mathematical representations? The answer is we convert them to vectors!
     '''
+    all_sentence = []
+    all_sentence.append(sentence1)
+    all_sentence.append(sentence2)
+    all_sentence.append(sentence3)
+    fun_work(all_sentence)
+    # print()
 
     # TODO 3 create the matrix where count of COLUMNS is unique words and ROWS count of sentences
 
