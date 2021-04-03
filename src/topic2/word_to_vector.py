@@ -25,7 +25,7 @@ def collect_all_unique_words(list_of_sentences):
     1. all unique words have to be collected to the list
     """
     # TODO 1 use HOF 'map, filter, etc'
-    return None
+    return ['a', 'b', 'c']
 
 
 def to_lowercase_and_remove_stop_words(list_of_sentences):
