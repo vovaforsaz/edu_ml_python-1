@@ -38,9 +38,9 @@ def to_lowercase_and_remove_stop_words(list_of_sentences):
     res = list(map(lambda x: x.lower().replace('.',''), list_of_sentences))
     stop_words = stopwords.words('english')
     stop_iste = ['.', 'also', 'too']
-    respons = list(filter(lambda x: x not in stop_words, res))
-    resp = list(filter(lambda x: x not in stop_iste, respons))
-    return resp
+    respons = list(filter(lambda x: x not in stop_words and x not in stop_iste, res))
+    # resp = list(filter(lambda x: x not in stop_iste, respons))
+    return respons
 
 
 def create_matrix(dan, all_sentence):
@@ -51,7 +51,7 @@ def create_matrix(dan, all_sentence):
     for sentence in range(len(all_sentence)):
         tmp_list = all_sentence[sentence].lower()
         for u_word in dan:
-            if tmp_list.find(u_word) == -1:
+            if u_word in tmp_list: #tmp_list.find(u_word) == -1:
                 print(0, end="\t\t")
             else:
                 print(1, end="\t\t")
