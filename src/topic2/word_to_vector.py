@@ -74,7 +74,7 @@ if __name__ == '__main__':
                        "Hello"]
 
     '''
-    we need to deal with linguistic entities such as words?
+    We need to deal with linguistic entities such as words?
     How can we model them as mathematical representations? The answer is we convert them to vectors!
     '''
     matrix = matrixObject(count_of_columns=10)
