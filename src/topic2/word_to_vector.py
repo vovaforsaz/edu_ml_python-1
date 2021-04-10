@@ -8,7 +8,6 @@ Poetry is, at its core, the art of identifying and manipulating linguistic simil
 similarity and simple linear algebra
 
 @see https://www.baeldung.com/cs/convert-word-to-vector
-
 """
 
 
@@ -26,6 +25,8 @@ def collect_all_unique_words(list_of_words):
             unique_words.append(w)
 
     unique_words.sort(reverse=False)
+
+    # example 3 please use HOF 'map, filter, zip'
     return unique_words
 
 
@@ -63,6 +64,9 @@ class matrixObject():
     def print_matrix(self):
         print(self.matrix_title_list)
         list(map(lambda w: print(w), self.vector_matrix))
+
+    def get_title(self):
+        return self.matrix_title_list
 
 
 if __name__ == '__main__':
