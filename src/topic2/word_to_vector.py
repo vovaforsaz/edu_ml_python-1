@@ -55,6 +55,10 @@ def create_matrix(dan, all_sentence):
     for i in range(len(dan)):
         mat.append([])
     for i in all_sentence:
+        a = i.split(" ")
+
+        print(a)
+
         for j in range(len(new_lests)):
             if i in new_lests[j]:
                 mat[j].append(1)
