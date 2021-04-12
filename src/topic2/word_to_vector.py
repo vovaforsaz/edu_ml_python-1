@@ -12,38 +12,14 @@ similarity and simple linear algebra
 
 
 def collect_all_unique_words(list_of_words):
-    """
-    1. all unique words have to be collected to the list
-    """
-    # example 1
     unique_words = list(set(list_of_words))
-
-    # example 2
-    # unique_words = list()
-    # for w in list_of_words:
-    #     if unique_words.count(w) == 0:
-    #         unique_words.append(w)
-    #
-    # unique_words.sort(reverse=False)
-
-    # example 3 please use HOF 'map, filter, zip'
+    unique_words.sort(reverse=False)
     return unique_words
 
 
 def to_lowercase_and_remove_stop_words(list_of_words, stop_words_list):
-    """
-    1. Uppercase should be transform to lower case. For example 'Hello' -> 'hello'
-    2. Remove all STOP WORDS like - 'too, and, etc'
-
-    """
     res = list(filter(lambda x: stop_words_list.count(x) == 0, list_of_words))
-    res = list(map(lambda x: x.lower(), res))
-    return res
-
-# def count_fun(w):
-#     for i in w:
-#         matrix.extend_matrix(i.split())
-#     res.count(i)
+    return list(map(lambda x: x.lower(), res))
 class matrixObject():
 
     def __init__(self, count_of_columns, stop_words_list=None, matrix_title_list=None):
@@ -62,7 +38,7 @@ class matrixObject():
     def extend_matrix(self, list_of_words):
         res = self.update_title(list_of_words)
         self.matrix_title_list = collect_all_unique_words(res + self.matrix_title_list)
-        self.vector_matrix.append(list(map(lambda w: print(res.count(w)), self.matrix_title_list)))
+        self.vector_matrix.append(list(map(lambda w: res.count(w), self.matrix_title_list)))
 
     def print_matrix(self):
         print(self.matrix_title_list)
