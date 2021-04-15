@@ -10,6 +10,7 @@ similarity and simple linear algebra
 @see https://www.baeldung.com/cs/convert-word-to-vector
 """
 
+from nltk.corpus import stopwords
 
 def collect_all_unique_words(list_of_words):
     unique_words = list(set(list_of_words))
@@ -18,12 +19,15 @@ def collect_all_unique_words(list_of_words):
 
 
 def to_lowercase_and_remove_stop_words(list_of_words, stop_words_list):
-    res = list(filter(lambda x: stop_words_list.count(x) == 0, list_of_words))
+    stop_words = stopwords.words('english')
+    res = list(filter(lambda x: x not in stop_words and x not in stop_words_list, list_of_words))
+    # res = list(filter(lambda x: stop_words_list.count(x) == 0, list_of_words)) #delete line merged
     return list(map(lambda x: x.lower(), res))
+
 class matrixObject():
 
     def __init__(self, count_of_columns, stop_words_list=None, matrix_title_list=None):
-        if stop_words_list is None: stop_words_list = []
+        if stop_words_list is None: stop_words_list = ['to','too.','.']
         if matrix_title_list is None: matrix_title_list = []
         self.count_of_columns = count_of_columns
         self.stop_words_list = stop_words_list
@@ -49,6 +53,7 @@ if __name__ == '__main__':
                         "Socrates Socrates likes to watch movies. Mary likes movies too.",
                        "Rene Descartes likes to watch movies. Mary likes movies too.",
                        "Kant, also likes to watch football games",
+        "Rene Descartes likes to watch movies. Mary likes movies too.",
                        "Test",
                        "Kant, also likessada to waasdtch asdasfootball games",
                        "Hello"
