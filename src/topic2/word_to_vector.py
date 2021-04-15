@@ -43,19 +43,16 @@ class matrixObject():
     def print_matrix(self):
         print(self.matrix_title_list)
         list(map(lambda w: print(w), self.vector_matrix))
-    #
-    # def get_title(self):
-    #     return self.matrix_title_list
-
 
 if __name__ == '__main__':
-
-    list_for_matrix = ["Socrates Socrates likes to watch movies. Mary likes movies too.",
+    list_for_matrix = [
+                        "Socrates Socrates likes to watch movies. Mary likes movies too.",
                        "Rene Descartes likes to watch movies. Mary likes movies too.",
                        "Kant, also likes to watch football games",
                        "Test",
                        "Kant, also likessada to waasdtch asdasfootball games",
-                       "Hello"]
+                       "Hello"
+    ]
 
     '''
     We need to deal with linguistic entities such as words?
@@ -64,5 +61,4 @@ if __name__ == '__main__':
     matrix = matrixObject(count_of_columns=5)
     for i in list_for_matrix:
         matrix.extend_matrix(i.split())
-
     matrix.print_matrix()
