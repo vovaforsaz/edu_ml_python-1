@@ -12,6 +12,7 @@ print("Начало работы выбрать из ассортимента:")
 als_cofe = coffee_machine.acceptance_of_order()
 print(als_cofe)
 
+
 cofe = eval(input())
 cof_int = int(cofe)
 cofe_name = als_cofe['cofe_name'][cof_int]
