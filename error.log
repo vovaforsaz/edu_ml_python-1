@@ -1,0 +1,8 @@
+2021-04-21 21:59:38,620 - [ERROR] - error_log - name - (main.py).<module>(15) - error_log
+2021-04-21 22:00:40,420 - [ERROR] - vff - a - (main.py).error_log(17) - vff
+2021-04-21 22:01:48,687 - [ERROR] - vff - a - (log.py).error_logs(44) - vff
+2021-04-21 22:02:14,380 - [ERROR] - main - start - (log.py).error_logs(44) - main
+2021-04-21 22:02:20,474 - [ERROR] - main - start - (log.py).error_logs(44) - main
+2021-04-21 22:05:49,372 - [ERROR] - main - start - (log.py).error_logs(44) - main
+2021-04-21 22:06:44,675 - [ERROR] - main - start - (log.py).error_logs(44) - main
+2021-04-21 22:06:51,685 - [ERROR] - main - start - (log.py).error_logs(44) - main
