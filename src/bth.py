@@ -3,8 +3,7 @@
 
 import pprint
 import binascii
-import mnemonic
-import bip32utils
+
 
 def bip39(mnemonic_words):
     mobj = mnemonic.Mnemonic("english")
